@@ -30,3 +30,8 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+-- Split options
+vim.opt.splitbelow = true
+-- terminal size
+--vim.opt.termsize="10x0"

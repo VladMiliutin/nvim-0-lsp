@@ -4,7 +4,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use 'duane9/nvim-rg'
+  --use 'duane9/nvim-rg'
+
+  use("nvim-lua/plenary.nvim")
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
@@ -39,6 +41,11 @@ return require('packer').startup(function(use)
   use("nvim-treesitter/playground")
   use("ThePrimeagen/harpoon")
   use("mbbill/undotree")
+
+  use("tpope/vim-fugitive")
+  use("nvim-treesitter/nvim-treesitter-context");
+  --use("nvim-treesitter/nvim-treesitter-refactor");
+
   use {
     "ThePrimeagen/refactoring.nvim",
     requires = {
@@ -46,9 +53,6 @@ return require('packer').startup(function(use)
         {"nvim-treesitter/nvim-treesitter"}
     }
   }
-
-  use("tpope/vim-fugitive")
-  use("nvim-treesitter/nvim-treesitter-context");
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -78,4 +82,17 @@ return require('packer').startup(function(use)
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
   use("ThePrimeagen/vim-be-good")
+
+  use {
+      "folke/which-key.nvim",
+      config = function()
+        vim.o.timeout = true
+        vim.o.timeoutlen = 300
+        require("which-key").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+  }
 end)
