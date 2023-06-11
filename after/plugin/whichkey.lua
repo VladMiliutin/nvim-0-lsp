@@ -23,6 +23,22 @@ wk.register({
             name = "Git actions",
             s = "Show"
         },
+        c = {
+            name = "Code actions",
+            a = "Code actions",
+            d = "Go to definition",
+            r = "Open references",
+        },
+        v = {
+            name = "Some lsp commands",
+            ws = "Workspace symbol",
+            d = "Opena float",
+
+        },
+        r = {
+            name = "Reactor",
+            n = "Rename",
+        },
     },
     ["v"] = {
     }
